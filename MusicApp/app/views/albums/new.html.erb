@@ -1,0 +1,25 @@
+<h2>Add and Album</h2>
+
+<form class="" action="<%=band_albums_url(params[:band_id])%>" method="post">
+  <input type="hidden" name="authenticity_token" value="form_authenticity_token">
+
+  <label>Title:
+  <input type="text" name="album[title]">
+  </label>
+
+  <label>Year:
+    <input type="text" name="album[year]">
+  </label>
+
+  <label>Live:
+    <input type="radio" name="album[live_or_studio]" value="Studio">
+  </label>
+  <label>Studio:
+    <input type="radio" name="album[live_or_studio]" value="Live">
+  </label>
+
+  <br>
+
+  <input type="submit" name="name" value="SUBMIT!">
+
+</form>

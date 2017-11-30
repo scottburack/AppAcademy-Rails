@@ -1,0 +1,15 @@
+<h2><%= @band.name %></h2>
+
+  <% @album.each do %>
+    <p><%= @album.name  %></p>
+    <p><%= @album.year  %></p>
+    <p><%= @album.live_or_studio  %></p>
+  <% end %>
+
+  <%= button_to "Add Album", new_band_album_url(@band.id), method: :get %>
+
+  <form class="" action="<%= band_url(@band) %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" name="name" value="Delete Band">
+  </form>
